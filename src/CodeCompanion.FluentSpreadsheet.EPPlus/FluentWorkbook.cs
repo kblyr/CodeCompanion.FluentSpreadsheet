@@ -1,3 +1,4 @@
+using System.IO;
 using OfficeOpenXml;
 
 namespace CodeCompanion.FluentSpreadsheet
@@ -45,6 +46,18 @@ namespace CodeCompanion.FluentSpreadsheet
         {
             _rawWorkbook.Worksheets.Delete(index);
             return this;
+        }
+
+        public void Save()
+        {
+            _package.Save();
+            _package.Dispose();
+        }
+
+        public void SaveAs(string path)
+        {
+            _package.SaveAs(new FileInfo(path));
+            _package.Dispose();
         }
 
         public IFluentWorksheet OnWorksheet(string name) => new FluentWorksheet(_rawWorkbook.OnWorksheet(name), this);

@@ -11,5 +11,7 @@ namespace CodeCompanion.FluentSpreadsheet
         IFluentWorkbook DeleteWorksheet(int index);
         IFluentWorksheet OnWorksheet(string name); 
         IFluentWorksheet OnWorksheet(int index);
+        void Save();
+        void SaveAs(string path);
     }
 }

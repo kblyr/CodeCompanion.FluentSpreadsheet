@@ -38,5 +38,9 @@ namespace CodeCompanion.FluentSpreadsheet
 
             return worksheet;
         }
+
+        public static void Save(this IFluentWorksheet worksheet) => worksheet.Workbook.Save();
+
+        public static void SaveAs(this IFluentWorksheet worksheet, string path) => worksheet.Workbook.SaveAs(path);
     }
 }

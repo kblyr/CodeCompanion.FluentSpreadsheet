@@ -16,5 +16,9 @@ namespace CodeCompanion.FluentSpreadsheet
         public static IFluentRange OnRange(this IFluentRange range, int row, int column) => range.Worksheet.OnRange(row, column);
 
         public static IFluentRange OnRange(this IFluentRange range, int beginRow, int beginColumn, int endRow, int endColumn) => range.Worksheet.OnRange(beginRow, beginColumn, endRow, endColumn);
+
+        public static void Save(this IFluentRange range) => range.Worksheet.Save();
+
+        public static void SaveAs(this IFluentRange range, string path) => range.Worksheet.SaveAs(path);
     }
 }

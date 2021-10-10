@@ -14,6 +14,7 @@ namespace CodeCompanion.FluentSpreadsheet
         IFluentRange Merge(bool isMerged = true);
         IFluentRange WithFontBold(bool isbold = true);
         IFluentRange WithFontUnderline(bool isUnderlined = true);
+        IFluentRange WithFontUnderline(SpreadsheetUnderlineStyle style);
         IFluentRange WithFontItalic(bool isItalic = true);
         IFluentRange WithNumberFormat(string format);
     }

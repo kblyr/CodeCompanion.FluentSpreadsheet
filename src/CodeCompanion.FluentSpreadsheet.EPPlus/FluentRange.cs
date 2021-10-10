@@ -71,6 +71,13 @@ namespace CodeCompanion.FluentSpreadsheet
             return this;
         }
 
+        public IFluentRange WithFontUnderline(SpreadsheetUnderlineStyle style)
+        {
+            _rawRange.Style.Font.UnderLine = true;
+            _rawRange.Style.Font.UnderLineType = style.ToRaw();
+            return this;
+        }
+
         public IFluentRange WithFontItalic(bool isItalic = true)
         {
             _rawRange.Style.Font.Italic = isItalic;

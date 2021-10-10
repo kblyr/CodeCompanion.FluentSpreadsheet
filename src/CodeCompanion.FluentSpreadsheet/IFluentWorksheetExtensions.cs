@@ -42,5 +42,11 @@ namespace CodeCompanion.FluentSpreadsheet
         public static void Save(this IFluentWorksheet worksheet) => worksheet.Workbook.Save();
 
         public static void SaveAs(this IFluentWorksheet worksheet, string path) => worksheet.Workbook.SaveAs(path);
+
+        public static IFluentWorksheet AddWorksheet(this IFluentWorksheet worksheet, string name) => worksheet.Workbook.AddWorksheet(name);
+
+        public static IFluentWorksheet CopyWorksheet(this IFluentWorksheet worksheet, string templateName, string name) => worksheet.Workbook.CopyWorksheet(templateName, name);
+
+        public static IFluentWorksheet CopyWorksheet(this IFluentWorksheet worksheet, int templateIndex, string name) => worksheet.Workbook.CopyWorksheet(templateIndex, name);
     }
 }

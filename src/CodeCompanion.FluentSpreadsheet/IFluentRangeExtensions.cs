@@ -20,5 +20,11 @@ namespace CodeCompanion.FluentSpreadsheet
         public static void Save(this IFluentRange range) => range.Worksheet.Save();
 
         public static void SaveAs(this IFluentRange range, string path) => range.Worksheet.SaveAs(path);
+
+        public static IFluentWorksheet AddWorksheet(this IFluentRange range, string name) => range.Worksheet.AddWorksheet(name);
+
+        public static IFluentWorksheet CopyWorksheet(this IFluentRange range, string templateName, string name) => range.Worksheet.CopyWorksheet(templateName, name);
+
+        public static IFluentWorksheet CopyWorksheet(this IFluentRange range, int templateIndex, string name) => range.Worksheet.CopyWorksheet(templateIndex, name);
     }
 }

@@ -66,5 +66,11 @@ namespace CodeCompanion.FluentSpreadsheet
             _rawRange.Style.Font.Italic = isItalic;
             return this;
         }
+
+        public IFluentRange WithNumberFormat(string format)
+        {
+            _rawRange.Style.Numberformat.Format = format;
+            return this;
+        }
     }
 }

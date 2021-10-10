@@ -15,5 +15,6 @@ namespace CodeCompanion.FluentSpreadsheet
         IFluentRange WithFontBold(bool isbold = true);
         IFluentRange WithFontUnderline(bool isUnderlined = true);
         IFluentRange WithFontItalic(bool isItalic = true);
+        IFluentRange WithNumberFormat(string format);
     }
 }

@@ -34,13 +34,23 @@ namespace CodeCompanion.FluentSpreadsheet
             return this;
         }
 
-        public IFluentRange WithBorder(SpreadsheetBoxSide side, SpreadsheetBorder border)
+        public IFluentRange WithBorder(SpreadsheetBoxSide side, SpreadsheetBorderStyle style)
         {
-            return this
-                .WithBorderIf(_rawRange.Style.Border.Top, border, side.HasFlag(SpreadsheetBoxSide.Top))
-                .WithBorderIf(_rawRange.Style.Border.Bottom, border, side.HasFlag(SpreadsheetBoxSide.Bottom))
-                .WithBorderIf(_rawRange.Style.Border.Left, border, side.HasFlag(SpreadsheetBoxSide.Left))
-                .WithBorderIf(_rawRange.Style.Border.Right, border, side.HasFlag(SpreadsheetBoxSide.Right));
+            var rawStyle = style.ToRaw();
+
+            if (side.HasFlag(SpreadsheetBoxSide.Top))
+                _rawRange.Style.Border.Top.Style = rawStyle;
+
+            if (side.HasFlag(SpreadsheetBoxSide.Bottom))
+                _rawRange.Style.Border.Bottom.Style = rawStyle;
+
+            if (side.HasFlag(SpreadsheetBoxSide.Left))
+                _rawRange.Style.Border.Left.Style = rawStyle;
+
+            if (side.HasFlag(SpreadsheetBoxSide.Right))
+                _rawRange.Style.Border.Right.Style = rawStyle;
+
+            return this;
         }
 
         public IFluentRange Merge(bool isMerged = true)

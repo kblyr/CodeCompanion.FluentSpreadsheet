@@ -10,7 +10,7 @@ namespace CodeCompanion.FluentSpreadsheet
         IFluentRange WithValue(object value);
         IFluentRange WithVerticalAlignment(SpreadsheetVerticalAlignment alignment);
         IFluentRange WithHorizontalAlignment(SpreadsheetHorizontalAlignment alignment);
-        IFluentRange WithBorder(SpreadsheetBoxSide side, SpreadsheetBorder border);
+        IFluentRange WithBorder(SpreadsheetBoxSide side, SpreadsheetBorderStyle style);
         IFluentRange Merge(bool isMerged = true);
         IFluentRange WithFontBold(bool isbold = true);
         IFluentRange WithFontUnderline(bool isUnderlined = true);

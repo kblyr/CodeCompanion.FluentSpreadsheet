@@ -2,7 +2,7 @@ using System.IO;
 
 namespace CodeCompanion.FluentSpreadsheet
 {
-    sealed class FluentSpreadsheetFactory : IFluentSpreadsheetFactory
+    public sealed class FluentSpreadsheetFactory : IFluentSpreadsheetFactory
     {
         public IFluentWorkbook New() => new FluentWorkbook(new());
 

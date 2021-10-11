@@ -1,4 +1,6 @@
 ﻿using CodeCompanion.FluentSpreadsheet;
+using CodeCompanion.FluentSpreadsheet.Formulas;
+using CodeCompanion.FluentSpreadsheet.Formulas.Arguments;
 using CodeCompanion.FluentSpreadsheet.Styles;
 using OfficeOpenXml;
 
@@ -19,7 +21,9 @@ factory.New()
             worksheet
                 .OnRange(2 + borderDemo_itemCounter, 1)
                     .WithValue(borderDemo_itemCounter + 1)
-                    .WithBorder(SpreadsheetBoxSide.Bottom | SpreadsheetBoxSide.LeftRight, SpreadsheetBorderStyle.Thin);
+                    .WithBorder(SpreadsheetBoxSide.Bottom | SpreadsheetBoxSide.LeftRight, SpreadsheetBorderStyle.Thin)
+                .OnRange(2 + borderDemo_itemCounter, 2)
+                    .FxAverage(RangeRef.From(worksheet.OnRange(2, 1, 2 + 9, 1)));
             borderDemo_itemCounter++;
         })
 

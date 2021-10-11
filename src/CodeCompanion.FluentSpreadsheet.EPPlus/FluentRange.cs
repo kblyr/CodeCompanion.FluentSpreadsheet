@@ -9,6 +9,7 @@ namespace CodeCompanion.FluentSpreadsheet
 
         public object RawRange => _rawRange;
         public IFluentWorksheet Worksheet { get; }
+        public string FullAddress => _rawRange.FullAddress;
 
         public FluentRange(ExcelRange rawRange, IFluentWorksheet worksheet)
         {
@@ -87,6 +88,12 @@ namespace CodeCompanion.FluentSpreadsheet
         public IFluentRange WithNumberFormat(string format)
         {
             _rawRange.Style.Numberformat.Format = format;
+            return this;
+        }
+
+        public IFluentRange WithFormula(string formula)
+        {
+            _rawRange.Formula = formula;
             return this;
         }
     }

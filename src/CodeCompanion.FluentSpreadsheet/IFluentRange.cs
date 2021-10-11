@@ -6,6 +6,7 @@ namespace CodeCompanion.FluentSpreadsheet
     {
         object RawRange { get; }
         IFluentWorksheet Worksheet { get; }
+        public string FullAddress { get; }
 
         IFluentRange WithValue(object value);
         IFluentRange WithVerticalAlignment(SpreadsheetVerticalAlignment alignment);
@@ -17,5 +18,6 @@ namespace CodeCompanion.FluentSpreadsheet
         IFluentRange WithFontUnderline(SpreadsheetUnderlineStyle style);
         IFluentRange WithFontItalic(bool isItalic = true);
         IFluentRange WithNumberFormat(string format);
+        IFluentRange WithFormula(string formula);
     }
 }

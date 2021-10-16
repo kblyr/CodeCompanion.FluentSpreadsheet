@@ -8,8 +8,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\..\src\CodeCompanion.FluentSpreadsheet\CodeCompanion.FluentSpreadsheet.csproj" />
-    <ProjectReference Include="..\..\src\CodeCompanion.FluentSpreadsheet.EPPlus\CodeCompanion.FluentSpreadsheet.EPPlus.csproj" />
+    <ProjectReference Include="..\..\src\FluentSpreadsheet\CodeCompanion.FluentSpreadsheet.csproj" />
+    <ProjectReference Include="..\..\src\FluentSpreadsheet.EPPlus\CodeCompanion.FluentSpreadsheet.EPPlus.csproj" />
   </ItemGroup>
 
 </Project>

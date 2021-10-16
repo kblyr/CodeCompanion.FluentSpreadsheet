@@ -1,5 +1,3 @@
-using System;
-
 namespace CodeCompanion.FluentSpreadsheet.Formulas
 {
     public static class SpreadsheetFunctionConverter

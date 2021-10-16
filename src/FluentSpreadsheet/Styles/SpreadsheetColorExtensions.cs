@@ -1,4 +1,5 @@
 using System.Drawing;
+
 namespace CodeCompanion.FluentSpreadsheet.Styles
 {
     public static class SpreadsheetColorExtensions

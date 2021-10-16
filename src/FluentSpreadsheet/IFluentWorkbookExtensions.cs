@@ -1,6 +1,3 @@
-using System;
-using System.Collections.Generic;
-
 namespace CodeCompanion.FluentSpreadsheet
 {
     public static class IFluentWorkbookExtensions

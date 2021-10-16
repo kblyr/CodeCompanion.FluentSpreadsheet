@@ -1,4 +1,3 @@
-using System;
 namespace CodeCompanion.FluentSpreadsheet
 {
     public static class IFluentRangeExtensions

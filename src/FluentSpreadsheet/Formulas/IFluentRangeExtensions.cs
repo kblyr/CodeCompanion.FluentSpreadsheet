@@ -1,4 +1,3 @@
-using System;
 using CodeCompanion.FluentSpreadsheet.Formulas.Arguments;
 
 namespace CodeCompanion.FluentSpreadsheet.Formulas

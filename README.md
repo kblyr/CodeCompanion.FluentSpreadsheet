@@ -1,4 +1,6 @@
 # CodeCompanion.FluentSpreadsheet
+[![GitHub release (latest SemVer)](https://img.shields.io/github/v/release/kblyr/CodeCompanion.FluentSpreadsheet?color=white&logo=github)](https://github.com/kblyr/CodeCompanion.FluentSpreadsheet)
+[![Nuget version (CodeCompanion.FluentSpreadsheet)](https://img.shields.io/nuget/v/CodeCompanion.FluentSpreadsheet?logo=nuget)](https://www.nuget.org/packages/CodeCompanion.FluentSpreadsheet)
 
 When building systems for a client, there will always be a requirement to generate reports, and sometimes we need to export it into spreadsheets.
 
